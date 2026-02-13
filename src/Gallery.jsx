@@ -14,8 +14,7 @@ const Gallery = () => {
             })
 
             .catch((error) => {
-                console.error('Error fetching images:', error);
-                setLoading(false);      
+                console.error('Error fetching images:', error);     
             });
             }, []);
 
@@ -23,17 +22,21 @@ const Gallery = () => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
             };
 
-                const prevImage = () => {
+            const prevImage = () => {
                 setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-                };
+            };
+
+            const handleThumbnailClick = (index) => {
+                setCurrentIndex(index);
+            };
 
             return (
                 <div className="gallery-container">
                     <div className="main-image-container">
                         {images.length > 0 && (
-               <img
-                src={images[currentIndex].url}
-                alt={images[currentIndex].alt}  />
+                        <img
+                            src={images[currentIndex].url}
+                            alt={images[currentIndex].alt}  />
                 )}
                 </div>
 
@@ -45,20 +48,20 @@ const Gallery = () => {
                                 className={`thumbnail ${index === currentIndex ? 'active' : ''}`}
                                 src={image.url}
                                 alt={image.alt}
-                                onClick={() => setCurrentIndex(index)}
+                                onClick={() => handleThumbnailClick(index)}
                                 />
                             ))}
                         </div>
 
-                        <div className="arrows">
-                            <button onClick={prevImage} className="arrow left-arrow">
+                    <div className="arrows">
+                        <button onClick={prevImage} className="arrow left-arrow">
                                 {"<"}
-                            </button>
-                            <button onClick={nextImage} className="arrow right-arrow">
+                        </button>
+                        <button onClick={nextImage} className="arrow right-arrow">
                                 {">"}
-                            </button>
-                            </div>
-                        </div>
+                        </button>
+                     </div>
+                </div>
             );
         };
         
