@@ -26,8 +26,8 @@ const Gallery = () => {
                 setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
             };
 
-            const handleThumbnailClick = (index) => {
-                setCurrentIndex(index);
+            const handleThumbnailClick = () => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
             };
 
             return (
@@ -35,6 +35,7 @@ const Gallery = () => {
                     <div className="main-image-container">
                         {images.length > 0 && (
                         <img
+                            className="main-image"
                             src={images[currentIndex].url}
                             alt={images[currentIndex].alt}  />
                 )}
@@ -42,15 +43,14 @@ const Gallery = () => {
 
 
                     <div className="thumbnail-bar">
-                         {images.map((image, index) => (
+                         {images.length > 0 &&  (
                                 <img
-                                key={image.id}
-                                className={`thumbnail ${index === currentIndex ? 'active' : ''}`}
-                                src={image.url}
-                                alt={image.alt}
-                                onClick={() => handleThumbnailClick(index)}
+                                className="thumbnail active"
+                                src={images[currentIndex].url}
+                                alt={images[currentIndex].alt}
+                                onClick={handleThumbnailClick}
                                 />
-                            ))}
+                            )}
                         </div>
 
                     <div className="arrows">
