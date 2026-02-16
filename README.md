@@ -1,16 +1,20 @@
-# React + Vite
+Installation Instructions:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Click The Link and it will open in your chosen browser
 
-Currently, two official plugins are available:
+User Instructions:
+- The gallery provides for all your froggy needs.
+- Click the Thumbnail to display a new Frog
+- Once you run out of Frogs you can start again for unlimited Froggy Fun!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Reflections
+This was a weird one, I was cruising on Friday, had frogs on the page a basic thumbnail gallery and all was well in the world.
+I had a few bits to tidy up on Sunday which turned into a nightmare, I tried for hours to get the images to dynamically resize so they displayed correctly but to no avail. I had to leave the first image as is in the end because I ran out of time.
+One issue I had was in trying to tweak things and get it to work how I wanted I kept modifying, adding and deleting code and ended up in my frustration losing track of what code was and wasn't needed anymore (there may be random code that doesn't do anything floating around!). I even tried to start again using the older image gallery as a template but converting that into react was a pain.
 
-## React Compiler
+Anyway, lesson learnt must be more careful when tweaking things and follow a plan so i don't lose track of what is going on.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
